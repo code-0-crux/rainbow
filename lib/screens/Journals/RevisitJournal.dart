@@ -20,9 +20,7 @@ class _RevisitJournalState extends State<RevisitJournal> {
   Color textColor;
   String category;
   String instructions;
-  List Images = [
-    "assets/note.jpg"
-  ];
+  List Images = ["assets/note.jpg","assets/star1.jpg","assets/star6.jpg","assets/star8.jpg","assets/star4.jpg","assets/star5.jpg"];
   int imageSelected;
 
 
@@ -44,18 +42,18 @@ class _RevisitJournalState extends State<RevisitJournal> {
   @override
   Widget build(BuildContext context) {
     if (category == "Relieving Stress") {
-      instructions = "Write about what stresses you";
+      instructions = "Write about what stresses you. Write about it and analyze it from logical find of view.";
     }
     else if (category == "Self Awareness") {
-      instructions = "Discover yourself";
+      instructions = "Discover yourself. Write your observations about yourself.";
     }
     else if (category == "Emotion Management") {
-      instructions = "With whom or what are you attached emotionally?";
+      instructions = "With whom or what are you attached emotionally? What gets you in a good or bad mood";
     }
     else if (category == "Anxiety") {
-      instructions = "What are you thinking";
+      instructions = "What is making you anxious";
     }else if (category == "Confidence") {
-      instructions =  "Write what you like in yourself";
+      instructions =  "Write what you like in yourself. Find those things. Appreciate yourself";
     }  else {
       instructions = "WELCOME TO THE JOURNAL SECTION";
     }
@@ -64,7 +62,7 @@ class _RevisitJournalState extends State<RevisitJournal> {
         backgroundColor: constantColors.darkColor,
         actions: [
           IconButton(
-            color: Colors.yellowAccent,
+              color: Colors.yellowAccent,
               onPressed: () {
                 widget.docData.reference.update({
                   "experience": journalText.text,
@@ -74,7 +72,7 @@ class _RevisitJournalState extends State<RevisitJournal> {
               },
               icon: Icon(Icons.save)),
           IconButton(
-            color: Colors.redAccent,
+              color: Colors.redAccent,
               onPressed: () {
                 widget.docData.reference.delete();
               },
@@ -145,7 +143,7 @@ class _RevisitJournalState extends State<RevisitJournal> {
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(Images[imageSelected]),
-              fit: BoxFit.cover,
+            fit: BoxFit.cover,
           ),
         ),
         width: MediaQuery

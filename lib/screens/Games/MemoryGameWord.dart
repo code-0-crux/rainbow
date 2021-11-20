@@ -1,3 +1,4 @@
+import 'package:audioplayers/audio_cache.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'dart:math';
@@ -15,8 +16,7 @@ class MemoryGameWord extends StatefulWidget {
 
 class _MemoryGameWordState extends State<MemoryGameWord> {
 
-
-
+  AudioCache audioCache = new AudioCache();
   List Colour_array = [Colors.black,Colors.blue];
 
   TextEditingController answerController = TextEditingController();
@@ -52,11 +52,15 @@ class _MemoryGameWordState extends State<MemoryGameWord> {
   void startTimerAnswer() {
     timerAnswer = Timer.periodic(Duration(seconds: 1), (timerAnswer) {
       if (TimeDuration2 > 0) {
+        audioCache.load("tune3.wav");
+        audioCache.play("tune3.wav");
         setState(() {
           TimeDuration2 -= 1;
         });
       }
       if (TimeDuration2 == 0) {
+        audioCache.load("tune6.wav");
+        audioCache.play("tune6.wav");
         timerAnswer.cancel();
         setState(() {
           visibility = false;

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rainbow/constants/Constantcolors.dart';
 import 'package:rainbow/screens/Activities/Meditation.dart';
+import 'package:rainbow/screens/Activities/YogNidra.dart';
 import 'package:rainbow/screens/Journals/Journal.dart';
 import 'package:rainbow/screens/Journals/JournalFace.dart';
 
@@ -96,7 +97,7 @@ class Anxiety extends StatelessWidget {
               child: GestureDetector(
 
                 onTap: (){
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Meditation()));
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>YogNidra()));
                 },
                 child: Card(
                   shape: RoundedRectangleBorder(
@@ -155,12 +156,12 @@ class Anxiety extends StatelessWidget {
                 child: Card(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20),bottomLeft: Radius.circular(20), bottomRight: Radius.circular(20))),
-                  color: Colors.deepPurpleAccent,
+                  color: constantColors.blueGreyColor,
                   child: Row(
                     children:[
                       Container(
                         decoration: BoxDecoration(
-                            color: Colors.deepPurpleAccent
+                            color: constantColors.blueGreyColor
                         ),
                         width: MediaQuery.of(context).size.width*0.45,
                         height: 200,

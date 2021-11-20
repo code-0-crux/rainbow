@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:math';
 
+import 'package:audioplayers/audio_cache.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rainbow/constants/Constantcolors.dart';
@@ -15,7 +16,7 @@ class MemoryGameNumber extends StatefulWidget {
 }
 
 class _MemoryGameNumberState extends State<MemoryGameNumber> {
-
+  AudioCache audioCache = new AudioCache();
   List Number_Array = [
     Random().nextInt(999).toString(),
     Random().nextInt(999).toString(),
@@ -92,11 +93,17 @@ class _MemoryGameNumberState extends State<MemoryGameNumber> {
   void startTimerAnswer(){
     timerAnswer = Timer.periodic(Duration(seconds: 1), (timerAnswer){
       if (TimeDuration2 > 0) {
+        audioCache.load("tune3.wav");
+        audioCache.play("tune3.wav");
         setState(() {
+
           TimeDuration2 -= 1;
         });
       }
       if (TimeDuration2 == 0) {
+        audioCache.load("tune6.wav");
+        audioCache.play("tune6.wav");
+
         timerAnswer.cancel();
         setState(() {
           visibility = false;

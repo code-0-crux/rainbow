@@ -105,7 +105,7 @@ class LogInPageHelpers with ChangeNotifier {
                       topRight: Radius.circular(15),
                       topLeft: Radius.circular(15)),
                   image: DecorationImage(
-                    image: AssetImage("assets/dot.jpg"),
+                    image: AssetImage("assets/Anxiety7.jpg"),
                     fit: BoxFit.cover,
                   )),
               child: Column(
@@ -114,6 +114,7 @@ class LogInPageHelpers with ChangeNotifier {
                     controller: userEmail,
                     maxLength: 50,
                     decoration: InputDecoration(
+                      hintStyle: TextStyle(fontWeight: FontWeight.bold),
                       hintText: 'Enter Email',
                     ),
                   ),
@@ -121,6 +122,7 @@ class LogInPageHelpers with ChangeNotifier {
                     controller: password,
                     maxLength: 50,
                     decoration: InputDecoration(
+                      hintStyle: TextStyle(fontWeight: FontWeight.bold),
                       hintText: 'Password',
                     ),
                   ),
@@ -133,7 +135,7 @@ class LogInPageHelpers with ChangeNotifier {
                             .whenComplete(() => Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => Home()),
+                              builder: (context) => StartScreen()),
                         ));
                       } else {}
                     },
@@ -141,7 +143,7 @@ class LogInPageHelpers with ChangeNotifier {
                       width: MediaQuery.of(context).size.width,
                       height: 40,
                       alignment: AlignmentDirectional.center,
-                      child: Text('Log In'),
+                      child: Text('Log In',style:  TextStyle(fontWeight: FontWeight.bold),),
                       decoration:
                       BoxDecoration(color: constantColors.greenColor),
                     ),
@@ -154,7 +156,7 @@ class LogInPageHelpers with ChangeNotifier {
                               builder: (context) => LandingPage()),
                         );
                       },
-                      child: Text('New User? Sign Up instead')),
+                      child: Text('New User? Sign Up instead',style:  TextStyle(fontWeight: FontWeight.bold,color: Colors.yellow),)),
                 ],
               ),
             ),

@@ -47,8 +47,9 @@ class _AnxietySSState extends State<AnxietySS> {
               )
           ),
           child: Center(
+
             child: Text("Nothing diminishes anxiety faster than action!",style: TextStyle(
-              color: Colors.white,fontWeight: FontWeight.bold,fontSize: 30
+              color: Colors.black,fontWeight: FontWeight.bold,fontSize: 30
             ),)
           ),
         ));

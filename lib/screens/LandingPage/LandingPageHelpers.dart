@@ -7,6 +7,7 @@ import 'package:rainbow/screens/Activities/Meditation.dart';
 import 'package:rainbow/screens/Activities/StarGazing.dart';
 import 'package:rainbow/screens/Games/MemoryGameNumber.dart';
 import 'package:rainbow/screens/Journals/JournalFace.dart';
+import 'package:rainbow/screens/StartScreen.dart';
 
 import 'package:rainbow/services/FirebaseWork.dart';
 import 'package:rainbow/services/LogInWork.dart';
@@ -103,7 +104,7 @@ class LandingPageHelpers with ChangeNotifier {
                       topRight: Radius.circular(15),
                       topLeft: Radius.circular(15)),
                   image: DecorationImage(
-                    image: AssetImage("assets/dot.jpg"),
+                    image: AssetImage("assets/Anxiety5.jpg"),
                     fit: BoxFit.cover,
                   )),
               child: Column(
@@ -112,6 +113,7 @@ class LandingPageHelpers with ChangeNotifier {
                     controller: username,
                     maxLength: 50,
                     decoration: InputDecoration(
+                      hintStyle: TextStyle(fontWeight: FontWeight.bold),
                       hintText: 'Enter Name',
                     ),
                   ),
@@ -119,6 +121,7 @@ class LandingPageHelpers with ChangeNotifier {
                     controller: userEmail,
                     maxLength: 50,
                     decoration: InputDecoration(
+                      hintStyle: TextStyle(fontWeight: FontWeight.bold),
                       hintText: 'Enter Email',
                     ),
                   ),
@@ -126,6 +129,7 @@ class LandingPageHelpers with ChangeNotifier {
                     controller: password,
                     maxLength: 50,
                     decoration: InputDecoration(
+                      hintStyle: TextStyle(fontWeight: FontWeight.bold),
                       hintText: 'Password',
                     ),
                   ),
@@ -144,13 +148,15 @@ class LandingPageHelpers with ChangeNotifier {
                             'userId': Provider.of<LogInWork>(context,
                                 listen: false)
                                 .getUserId,
+                            'goalCount': 0,
+                            'journalCount':0,
                           });
                         })
                             .whenComplete(() => print("Signing Up"))
                             .whenComplete(() => Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => JournalFace()),
+                              builder: (context) => StartScreen()),
                         ));
                       } else {}
                     },
@@ -158,7 +164,7 @@ class LandingPageHelpers with ChangeNotifier {
                       width: MediaQuery.of(context).size.width,
                       height: 40,
                       alignment: AlignmentDirectional.center,
-                      child: Text('Sign Up'),
+                      child: Text('Sign Up',style:  TextStyle(fontWeight: FontWeight.bold),),
                       decoration:
                       BoxDecoration(color: constantColors.greenColor),
                     ),
@@ -170,7 +176,7 @@ class LandingPageHelpers with ChangeNotifier {
                           MaterialPageRoute(builder: (context) => LogInPage()),
                         );
                       },
-                      child: Text('Already have an account? Log In instead')),
+                      child: Text('Already have an account? Log In instead',style:  TextStyle(fontWeight: FontWeight.bold,color: Colors.purple),)),
                 ],
               ),
             ),

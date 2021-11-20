@@ -1,4 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:rainbow/screens/SplashScreens/CommunicationSS.dart';
+import 'package:rainbow/screens/SplashScreens/ConfidenceSS.dart';
+import 'package:rainbow/screens/SplashScreens/EmotionSS.dart';
+import 'package:rainbow/screens/SplashScreens/FocusSS.dart';
+import 'package:rainbow/screens/SplashScreens/SelfSS.dart';
+import 'package:rainbow/screens/SplashScreens/SplashScreenActivities.dart';
+import 'package:rainbow/screens/SplashScreens/StressSS.dart';
 
 import 'RainbowTabs/Communication.dart';
 import 'RainbowTabs/Confidence.dart';
@@ -22,14 +29,15 @@ class Home extends StatelessWidget {
     "Better Communication"
   ];
 
+
   List tabs = [
-    Stress(),
-    FocusGames(),
+    StressSS(),
+    FocusSS(),
     AnxietySS(),
-    Confidence(),
-    EmotionManagement(),
-    SelfAwareness(),
-    Communication(),
+    ConfidenceSS(),
+    EmotionSS(),
+    SelfSS(),
+    CommunicationSS(),
   ];
 
 

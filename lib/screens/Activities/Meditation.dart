@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:math';
 
 import 'package:audioplayers/audio_cache.dart';
 import 'package:flutter/material.dart';
@@ -9,19 +10,18 @@ class Meditation extends StatefulWidget {
 }
 
 class _MeditationState extends State<Meditation> with TickerProviderStateMixin{
-  int TimeDuration = 30;
+  int TimeDuration = 600;
    Timer timer;
   AudioCache audioCache = new AudioCache();
-  List Colour_array = [Colors.purple,Colors.indigo,Colors.blue,Colors.green,Colors.yellow,Colors.orange,Colors.red,Colors.purple,Colors.indigo,Colors.blue,Colors.green,Colors.yellow,Colors.orange,Colors.red,Colors.purple,Colors.indigo,Colors.blue,Colors.green,Colors.yellow,Colors.orange,Colors.red,Colors.purple,Colors.indigo,Colors.blue,Colors.green,Colors.yellow,Colors.orange,Colors.red,Colors.purple,Colors.indigo,Colors.blue];
+  List Colour_array = [Colors.purple,Colors.indigo,Colors.blue,Colors.green,Colors.yellow,Colors.orange,Colors.red,];
    void startTimer(){
 
      timer = Timer.periodic(Duration(seconds: 1), (timer) {
        if(TimeDuration>0){
-         if(TimeDuration==30){
+         if(TimeDuration==10){
          setState(() {
            TimeDuration -=1;
-           audioCache.load("8d82b5_Letter_X_Sound_Effect.mp3");
-           audioCache.play("8d82b5_Letter_X_Sound_Effect.mp3");
+
          });
        }
          else{
@@ -32,24 +32,25 @@ class _MeditationState extends State<Meditation> with TickerProviderStateMixin{
          }
        }
        if(TimeDuration==0){
-         audioCache.load("8d82b5_Letter_X_Sound_Effect.mp3");
-         audioCache.play("8d82b5_Letter_X_Sound_Effect.mp3");
+         audioCache.load("tune6.wav");
+         audioCache.play("tune6.wav");
          timer.cancel();
        }
 
 
      });
    }
-   void playStopMusic(){
-     if (TimeDuration ==0) {
-       audioCache.load("8d82b5_Letter_X_Sound_Effect.mp3");
-       audioCache.play("8d82b5_Letter_X_Sound_Effect.mp3");
-     }
-   }
+   // void playStopMusic(){
+   //   if (TimeDuration ==0) {
+   //     audioCache.load("tune3.mp3");
+   //     audioCache.play("8d82b5_Letter_X_Sound_Effect.mp3");
+   //   }
+   // }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Meditation-feel it"),
+        backgroundColor: Colors.blueGrey,
       ),
       body: Container(
         decoration: BoxDecoration(
@@ -63,7 +64,7 @@ class _MeditationState extends State<Meditation> with TickerProviderStateMixin{
             children: [
               Text("Relax and close your eyes",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 25),),
 
-              Text("$TimeDuration",style: TextStyle(color: Colour_array[TimeDuration],fontSize: 100,fontWeight: FontWeight.bold),),
+              Text("$TimeDuration",style: TextStyle(color: Colour_array[Random().nextInt(6)],fontSize: 100,fontWeight: FontWeight.bold),),
               Divider(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -84,7 +85,7 @@ class _MeditationState extends State<Meditation> with TickerProviderStateMixin{
               IconButton(onPressed: (){
                 setState(() {
                   timer.cancel();
-                  TimeDuration =30;
+                  TimeDuration =600;
 
                 });
               }, icon: Icon(Icons.restart_alt),

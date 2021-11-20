@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rainbow/constants/Constantcolors.dart';
+import 'package:rainbow/screens/Journals/Journal.dart';
 
 import 'GoalSettings.dart';
 
@@ -13,7 +14,9 @@ class Confidence extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-
+        backgroundColor: Colors.blueGrey,
+        centerTitle: true,
+        title: Text("Build Confidence"),
       ),
 
       body: Container(
@@ -24,17 +27,17 @@ class Confidence extends StatelessWidget {
               child: GestureDetector(
 
                 onTap: (){
-                  //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Journal("Emotion Management")));
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Journal("Confidence")));
                 },
                 child: Card(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20),bottomLeft: Radius.circular(20), bottomRight: Radius.circular(20))),
-                  color: Colors.purple,
+                  color: Colors.blueGrey,
                   child: Row(
                     children:[
                       Container(
                         decoration: BoxDecoration(
-                            color: Colors.purple
+                            color: Colors.blueGrey
                         ),
                         width: MediaQuery.of(context).size.width*0.45,
                         height: 200,

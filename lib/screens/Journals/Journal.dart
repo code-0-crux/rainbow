@@ -36,24 +36,25 @@ class _JournalState extends State<Journal> {
   @override
   Widget build(BuildContext context) {
     if (widget.category == "Relieving Stress") {
-      instructions = "Write about what stresses you";
+      instructions = "Write about what stresses you. Write about it and analyze it from logical find of view.";
     }
     else if (widget.category == "Self Awareness") {
-      instructions = "Discover yourself";
+      instructions = "Discover yourself. Write your observations about yourself.";
     }
     else if (widget.category == "Emotion Management") {
-      instructions = "With whom or what are you attached emotionally?";
+      instructions = "With whom or what are you attached emotionally? What gets you in a good or bad mood";
     }
     else if (widget.category == "Anxiety") {
-      instructions = "What are you thinking";
+      instructions = "What is making you anxious";
     }else if (widget.category == "Confidence") {
-      instructions =  "Write what you like in yourself";
+      instructions =  "Write what you like in yourself. Find those things. Appreciate yourself";
     }  else {
       instructions = "WELCOME TO THE JOURNAL SECTION";
     }
     return Scaffold(
       appBar: AppBar(
         backgroundColor: constantColors.darkColor,
+
         actions: [
           IconButton(onPressed: () {
             Provider.of<FirebaseWork>(context, listen:false).Save(context, {
@@ -146,9 +147,9 @@ class _JournalState extends State<Journal> {
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage(Images[imageSelected],
-              ),
-              fit: BoxFit.cover
+                image: AssetImage(Images[imageSelected],
+                ),
+                fit: BoxFit.cover
             )
         ),
         width: MediaQuery.of(context).size.width,

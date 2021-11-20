@@ -17,11 +17,11 @@ class JournalHelper with ChangeNotifier{
         builder: (context, AsyncSnapshot<QuerySnapshot> snapshot) {
           return StaggeredGridView.countBuilder(
             itemCount: snapshot.hasData ? snapshot.data.docs.length : 0,
-            crossAxisCount: 4,
+            crossAxisCount: 2,
             crossAxisSpacing: 5,
             mainAxisSpacing: 5,
             staggeredTileBuilder: (index){
-              return StaggeredTile.count(2, 1);
+              return StaggeredTile.count(1, index%2==0?2:1);
             },
 
 
@@ -40,6 +40,7 @@ class JournalHelper with ChangeNotifier{
 
 
                   color: Colors.yellowAccent,
+
                   margin: EdgeInsets.all(10),
                   child: Column(
                     children: [

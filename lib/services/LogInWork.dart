@@ -45,4 +45,8 @@ class LogInWork with ChangeNotifier{
       }
     }
   }
+  Future logOut() async{
+    return FirebaseAuth.instance.signOut();
+
+  }
 }

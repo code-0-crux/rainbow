@@ -136,7 +136,40 @@ flutter:
     - assets/comm5.jpg
     - assets/rainbowImage.jpg
     - assets/Diary4.jpg
-
+    - assets/sky.jpg
+    - assets/blur.jpg
+    - assets/sky1.jpg
+    - assets/result.jpg
+    - assets/userpic.png
+    - assets/happyquizimg1.jpg
+    - assets/happyquizimg2.jpg
+    - assets/happyquizimg3.jpg
+    - assets/happyquizimg4.jpg
+    - assets/happyquizimg5.jpg
+    - assets/tune1.wav
+    - assets/tune6.wav
+    - assets/tune7.wav
+    - assets/tune4.wav
+    - assets/tune5.wav
+    - assets/tune2.wav
+    - assets/tune3.wav
+    - assets/animal1.jpg
+    - assets/animal2.jpg
+    - assets/animal3.jpg
+    - assets/animal4.jpg
+    - assets/animal5.jpg
+    - assets/nature3.jpg
+    - assets/nature4.jpg
+    - assets/nature5.jpg
+    - assets/nature6.jpg
+    - assets/nature7.jpg
+    - assets/nature8.jpg
+    - assets/nature9.jpg
+    - assets/nature10.jpg
+    - assets/nature11.jpg
+    - assets/nature12.jpg
+    - assets/nature13.jpg
+    - assets/nature14.jpg
 
 
   # To add assets to your application, add an assets section, like this:

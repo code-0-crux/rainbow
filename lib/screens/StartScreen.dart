@@ -30,7 +30,7 @@ class _StartScreenState extends State<StartScreen> {
 
 
   int _currentIndex = 0;
-  int pageIndex;
+  int pageIndex = 0;
 
   //Provider.of<StartScreenHelper>(context, listen: false)
   //           .startScreenBody(context, tabName, tabs),
