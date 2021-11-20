@@ -38,7 +38,7 @@ class FirebaseWork with ChangeNotifier{
   }
 
   Future Save(BuildContext context, dynamic data) async{
-    return FirebaseFirestore.instance.collection('journals').doc(Provider.of<LogInWork>(context,listen: false).getUserId).collection("myJournals").doc().set(data);
+    return FirebaseFirestore.instance.collection('journals').doc(Provider.of<LogInWork>(context,listen: false).getUserId).collection('myJournals').doc().set(data);
   }
 
 
