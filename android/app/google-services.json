@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "781689750320",
+    "project_id": "rainbow-71f74",
+    "storage_bucket": "rainbow-71f74.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:781689750320:android:a39634a96d08a8a924fef5",
+        "android_client_info": {
+          "package_name": "com.example.rainbow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "781689750320-ti98eeng99be5c6qmru9g3vf6effjgii.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rainbow",
+            "certificate_hash": "eb19b5bf61de6a06b73fef5a7a0fac918eec6498"
+          }
+        },
+        {
+          "client_id": "781689750320-055jm45k51sknqmsed4n9gd9rbovd8c9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6xvaf9AjIH6xrC8b3WihTG3P2ejmETes"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "781689750320-055jm45k51sknqmsed4n9gd9rbovd8c9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
